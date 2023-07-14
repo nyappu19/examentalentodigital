@@ -23,8 +23,8 @@
       </table>
       <div class="subtotal">
         <p>Subtotal productos: $ {{ subtotal.toFixed(0) }}</p>
-        <p v-if="descuento > 0">Descuentos: $ {{ descuento.toFixed(0) }}</p>
-        <p>Total: $ {{ total.toFixed(0) }}</p>
+        <p v-if="descuento > 0">Descuentos: -$ {{ descuento.toFixed(0) }}</p>
+        <p><strong>Total:</strong> $ {{ total.toFixed(0) }}</p>
       </div>
             <router-link to="/pagar"><v-btn color="purple">Pagar</v-btn></router-link>
     </div>

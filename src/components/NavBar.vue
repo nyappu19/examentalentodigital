@@ -12,8 +12,8 @@
       <v-spacer></v-spacer>
       <router-link to="/electronica" class="nav-link"><v-toolbar-title>Electronica</v-toolbar-title></router-link>
       <v-spacer></v-spacer>
-      <router-link to="/carrito">
-        <v-badge :content="carritoCount" class="ma-3" :value="carritoCount > 0">
+      <router-link to="/carrito" class="nav-link">
+        <v-badge>
           <v-icon>mdi-cart</v-icon>
         </v-badge>
       </router-link>
@@ -23,7 +23,7 @@
       <v-list nav dense>
         <v-list-item-group v-model="group" active-class="deep-purple--text text--accent-4">
           <v-list-item v-for="route in routes" :key="route.name">
-            <router-link :to="{ name: route.name }" class="text-light">
+            <router-link :to="{ name: route.name }" class="text-light nav-link">
               <v-list-item-icon>
                 <v-icon>{{ route.icon }}</v-icon>
               </v-list-item-icon>
@@ -68,11 +68,6 @@ export default {
         },
       ],
     };
-  },
-  computed: {
-    carritoCount() {
-      return this.$store.getters.carritoCount;
-    },
   },
 };
 </script>
