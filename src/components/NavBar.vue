@@ -6,11 +6,17 @@
       <v-spacer></v-spacer>
       <router-link to="/"><v-toolbar-title>Home</v-toolbar-title></router-link>
       <v-spacer></v-spacer>
-      <router-link to="/hombre"><v-toolbar-title>Vestuario Hombre</v-toolbar-title></router-link>
+      <router-link to="/hombre"
+        ><v-toolbar-title>Vestuario Hombre</v-toolbar-title></router-link
+      >
       <v-spacer></v-spacer>
-      <router-link to="/mujer"><v-toolbar-title>Vestuario Mujer</v-toolbar-title></router-link>
+      <router-link to="/mujer"
+        ><v-toolbar-title>Vestuario Mujer</v-toolbar-title></router-link
+      >
       <v-spacer></v-spacer>
-      <router-link to="/electronica"><v-toolbar-title>Electronica</v-toolbar-title></router-link>
+      <router-link to="/electronica"
+        ><v-toolbar-title>Electronica</v-toolbar-title></router-link
+      >
       <v-spacer></v-spacer>
       <router-link to="/carrito">
         <v-badge :content="carritoCount" class="ma-3" :value="carritoCount > 0">
@@ -21,7 +27,10 @@
 
     <v-navigation-drawer v-model="drawer" absolute temporary>
       <v-list nav dense>
-        <v-list-item-group v-model="group" active-class="deep-purple--text text--accent-4">
+        <v-list-item-group
+          v-model="group"
+          active-class="deep-purple--text text--accent-4"
+        >
           <v-list-item v-for="route in routes" :key="route.name">
             <router-link :to="{ name: route.name }" class="text-light">
               <v-list-item-icon>

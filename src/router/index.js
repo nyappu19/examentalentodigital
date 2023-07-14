@@ -45,8 +45,8 @@ const routes = [
     component: Electronica
   },
   {
-    path:'/carrito',
-    name:'Carrito',
+    path: '/carrito',
+    name: 'Carrito',
     component: Carrito
   },
 ]
