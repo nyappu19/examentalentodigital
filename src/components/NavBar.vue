@@ -1,0 +1,61 @@
+<template>
+  <div>
+    <v-app-bar color="black accent-4" dark>
+      <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
+
+      <v-toolbar-title>Tienda DeTodito</v-toolbar-title>
+      <v-spacer></v-spacer>
+    </v-app-bar>
+
+    <v-navigation-drawer v-model="drawer" absolute temporary>
+      <v-list nav dense>
+        <v-list-item-group v-model="group" active-class="deep-purple--text text--accent-4">
+          <v-list-item v-for="route in routes" :key="route.name">
+            <router-link :to="{ name: route.name }" class="text-light">
+              <v-list-item-icon>
+                <v-icon>{{ route.icon }}</v-icon>
+              </v-list-item-icon>
+              <v-list-item-content>
+                <v-list-item-title>{{ route.title }}</v-list-item-title>
+              </v-list-item-content>
+            </router-link>
+          </v-list-item>
+        </v-list-item-group>
+      </v-list>
+    </v-navigation-drawer>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "NavBar",
+  data() {
+    return {
+      drawer: false,
+      group: null,
+      routes: [
+        {
+          icon: "mdi-home",
+          title: "Home",
+          name: "home",
+        },
+        {
+          icon: "mdi-tie",
+          title: "Ropa Hombre",
+          name: "ropahombre",
+        },
+        {
+          icon: "mdi-tshirt-crew",
+          title: "Ropa Mujer",
+          name: "ropamujer",
+        },
+        {
+          icon: "mdi-rocket",
+          title: "Electrónica",
+          name: "electronica",
+        },
+      ],
+    };
+  },
+};
+</script>
