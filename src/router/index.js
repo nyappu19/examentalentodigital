@@ -6,7 +6,8 @@ import VestuarioHombre from '@/views/VestuarioHombre.vue'
 import VestuarioMujer from '@/views/VestuarioMujer.vue'
 import Electronica from '@/views/Electronica.vue'
 import Carrito from '@/components/Carrito.vue'
-import Pagar from '@/views/Pagar.vue';
+import Pagar from '@/views/Pagar.vue'
+import Confirmacion from '@/views/Confirmacion.vue';
 
 Vue.use(VueRouter)
 
@@ -54,6 +55,11 @@ const routes = [
     path: '/pagar',
     name: 'Pagar',
     component: Pagar
+  },
+  {
+    path: '/confirmacion',
+    name: 'Confirmacion',
+    component: Confirmacion
   },
 ]
 

@@ -70,7 +70,9 @@
           :value="opcion.value"
         ></v-radio>
       </v-radio-group>
+      <router-link to="/confirmacion">
 <v-btn color="purple">Confirmar</v-btn>
+</router-link>
     <carrito :productos="productos"></carrito>
     </v-container>
   </v-form>
