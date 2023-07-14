@@ -18,7 +18,7 @@
         <v-col v-for="(categoria, index) in tiposProductos" :key="index" cols="12" sm="6" md="4" class="my-4">
           <v-card>
             <v-img :src="categoria.image" :alt="categoria.name" height="300" class="fill-height"></v-img>
-            <v-btn color="blue darken-1">{{ categoria.name }}</v-btn>
+            <v-btn color="purple">{{ categoria.name }}</v-btn>
           </v-card>
         </v-col>
       </v-row>
