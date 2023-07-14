@@ -34,7 +34,7 @@
         <p v-if="descuento > 0">Descuentos: $ {{ descuento.toFixed(0) }}</p>
         <p>Total: $ {{ total.toFixed(0) }}</p>
       </div>
-      <v-btn color="purple">Pagar</v-btn>
+            <router-link to="/pagar"><v-btn color="purple">Pagar</v-btn></router-link>
     </div>
 
     <div class="productos-container"></div>

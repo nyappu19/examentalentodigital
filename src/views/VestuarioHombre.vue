@@ -1,6 +1,7 @@
 <template>
   <div>
     <div>
+       <carrito :productos="productos"></carrito>
       <v-container class="my-8">
         <h2 class="text-center">Vestuario de Hombre</h2>
         <v-row justify="center">
@@ -41,9 +42,12 @@
 
 <script>
 import productosData from "@/assets/json/ropaHombre.json";
-
+import Carrito from "../components/Carrito.vue";
 export default {
   name: "VestuarioHombre",
+  components: {
+    Carrito,
+  },
   data() {
     return {
       productoshombre: [],
