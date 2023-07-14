@@ -6,14 +6,6 @@
         El carrito está vacío
       </v-alert>
       <table v-else>
-        <!-- <thead>
-          <tr>
-            <th>Imagen</th>
-            <th>Título</th>
-            <th>Cantidad</th>
-            <th></th>
-          </tr>
-        </thead> -->
         <tbody>
           <tr v-for="(producto, index) in carrito" :key="producto.key">
             <td><img :src="producto.image" height="60" /></td>

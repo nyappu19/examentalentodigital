@@ -62,5 +62,4 @@ export default {
 </script>
 
 <style scoped>
-/* Estilos adicionales para el componente VestuarioHombre */
 </style>
