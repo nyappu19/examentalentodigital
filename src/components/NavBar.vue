@@ -2,7 +2,8 @@
   <div>
     <v-app-bar color="black accent-4" dark>
       <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
-
+<v-toolbar-title>DeTodito</v-toolbar-title>
+<v-spacer></v-spacer>
       <router-link to="/"><v-toolbar-title>Home</v-toolbar-title></router-link>
       <v-spacer></v-spacer>
             <router-link to="/hombre"><v-toolbar-title>Vestuario Hombre</v-toolbar-title></router-link>
