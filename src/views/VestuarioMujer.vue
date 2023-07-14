@@ -37,6 +37,11 @@ export default {
   mounted() {
     this.productosmujer = productosData;
   },
+    methods: {
+    agregarProducto(producto) {
+      this.$store.dispatch("agregarProductoAlCarrito", producto);
+    },
+  },
 };
 </script>
 
