@@ -42,12 +42,12 @@ export default {
         {
           icon: "mdi-tie",
           title: "Ropa Hombre",
-          name: "ropahombre",
+          name: "hombre",
         },
         {
           icon: "mdi-tshirt-crew",
           title: "Ropa Mujer",
-          name: "ropamujer",
+          name: "mujer",
         },
         {
           icon: "mdi-rocket",
