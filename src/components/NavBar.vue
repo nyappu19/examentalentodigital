@@ -2,15 +2,21 @@
   <div>
     <v-app-bar color="black accent-4" dark>
       <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
-<v-toolbar-title>DeTodito</v-toolbar-title>
-<v-spacer></v-spacer>
+      <v-toolbar-title>DeTodito</v-toolbar-title>
+      <v-spacer></v-spacer>
       <router-link to="/"><v-toolbar-title>Home</v-toolbar-title></router-link>
       <v-spacer></v-spacer>
-            <router-link to="/hombre"><v-toolbar-title>Vestuario Hombre</v-toolbar-title></router-link>
-                  <v-spacer></v-spacer>
-            <router-link to="/mujer"><v-toolbar-title>Vestuario Mujer</v-toolbar-title></router-link>
-                  <v-spacer></v-spacer>
-            <router-link to="/electronica"><v-toolbar-title>Electronica</v-toolbar-title></router-link>
+      <router-link to="/hombre"><v-toolbar-title>Vestuario Hombre</v-toolbar-title></router-link>
+      <v-spacer></v-spacer>
+      <router-link to="/mujer"><v-toolbar-title>Vestuario Mujer</v-toolbar-title></router-link>
+      <v-spacer></v-spacer>
+      <router-link to="/electronica"><v-toolbar-title>Electronica</v-toolbar-title></router-link>
+      <v-spacer></v-spacer>
+      <router-link to="/carrito">
+        <v-badge :content="carritoCount" class="ma-3" :value="carritoCount > 0">
+          <v-icon>mdi-cart</v-icon>
+        </v-badge>
+      </router-link>
     </v-app-bar>
 
     <v-navigation-drawer v-model="drawer" absolute temporary>
@@ -62,6 +68,11 @@ export default {
         },
       ],
     };
+  },
+  computed: {
+    carritoCount() {
+      return this.$store.getters.carritoCount;
+    },
   },
 };
 </script>

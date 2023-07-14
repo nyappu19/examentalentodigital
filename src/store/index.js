@@ -44,10 +44,10 @@ export default new Vuex.Store({
         producto.cantidad = cantidad;
       }
     },
-    ELIMINAR_PRODUCTO_DEL_CARRITO(state, idProducto) {
-      state.carrito = state.carrito.filter(p => p.id !== idProducto);
+      ELIMINAR_PRODUCTO_DEL_CARRITO(state, index) {
+        state.carrito.splice(index, 1);
+      },
     },
-  },
   actions: {
     agregarProductoAlCarrito({ commit }, producto) {
       commit('AGREGAR_PRODUCTO_AL_CARRITO', producto);
