@@ -4,7 +4,7 @@
       <v-container class="my-8">
         <h2 class="text-center">Electrónica</h2>
         <v-row justify="center">
-          <v-col v-for="(producto, index) in productos" :key="index" cols="12" sm="6" md="4" class="my-4">
+          <v-col v-for="(producto, index) in productoselectronica" :key="index" cols="12" sm="6" md="4" class="my-4">
             <v-card>
               <v-img :src="producto.image" :alt="producto.title" height="400" width="400" class="fill-height fill-width"></v-img>
               <v-card-title>{{ producto.title }}</v-card-title>
@@ -26,11 +26,11 @@ export default {
   name: 'Electronica',
   data() {
     return {
-      productos: [],
+      productoselectronica: [],
     };
   },
   mounted() {
-    this.productos = productosData;
+    this.productoselectronica = productosData;
   },
 };
 </script>
