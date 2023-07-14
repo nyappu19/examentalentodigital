@@ -19,7 +19,6 @@
           <v-card>
             <v-img :src="categoria.image" :alt="categoria.name" height="200"></v-img>
             <v-btn color="blue darken-1">{{ categoria.name }}</v-btn>
-
           </v-card>
         </v-col>
       </v-row>
