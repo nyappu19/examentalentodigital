@@ -3,8 +3,13 @@
     <v-app-bar color="black accent-4" dark>
       <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
 
-      <v-toolbar-title>Tienda DeTodito</v-toolbar-title>
+      <router-link to="/"><v-toolbar-title>Home</v-toolbar-title></router-link>
       <v-spacer></v-spacer>
+            <router-link to="/hombre"><v-toolbar-title>Vestuario Hombre</v-toolbar-title></router-link>
+                  <v-spacer></v-spacer>
+            <router-link to="/mujer"><v-toolbar-title>Vestuario Mujer</v-toolbar-title></router-link>
+                  <v-spacer></v-spacer>
+            <router-link to="/electronica"><v-toolbar-title>Electronica</v-toolbar-title></router-link>
     </v-app-bar>
 
     <v-navigation-drawer v-model="drawer" absolute temporary>
@@ -41,12 +46,12 @@ export default {
         },
         {
           icon: "mdi-tie",
-          title: "Ropa Hombre",
+          title: "Vestuario Hombre",
           name: "hombre",
         },
         {
           icon: "mdi-tshirt-crew",
-          title: "Ropa Mujer",
+          title: "Vestuario Mujer",
           name: "mujer",
         },
         {
