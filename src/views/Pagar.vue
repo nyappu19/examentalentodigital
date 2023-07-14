@@ -45,6 +45,7 @@
         <v-col cols="12" md="6">
           <v-text-field
             v-model="direccion"
+            :rules="direccionRules"
             label="Dirección"
             required
           ></v-text-field>
@@ -53,6 +54,7 @@
         <v-col cols="12" md="6">
           <v-text-field
             v-model="comuna"
+            :rules="comunaRules"
             label="Comuna"
             required
           ></v-text-field>
@@ -100,10 +102,17 @@ export default {
       ],
       telefono: '',
       telefonoRules: [
-        v => !!v || 'El teléfono es requerido',
+        (v) => !!v || "El teléfono es requerido",
+        (v) => /^[0-9]{9}$/.test(v) || "El teléfono debe tener 9 dígitos",
       ],
       direccion: '',
+      direccionRules: [
+        v => !!v || 'La dirección es requerida',
+      ],
       comuna: '',
+      comunaRules: [
+        v => !!v || 'La comuna es requerida',
+      ],
       formaPago: null,
       opcionesPago: [
         { label: 'Transferencia bancaria', value: 'transferencia' },
