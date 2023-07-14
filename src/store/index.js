@@ -18,9 +18,9 @@ export default new Vuex.Store({
     totalCarrito(state, getters) {
       let total = getters.carritoProductos.reduce((accumulator, producto) => accumulator + producto.subtotal, 0);
       if (total > 500) {
-        return total * 0.89; // Aplicar 11% de descuento
+        return total * 0.89; // 11% de descuento
       } else {
-        return total * 0.95; // Aplicar 5% de descuento
+        return total * 0.95; // 5% de descuento
       }
     },
   },

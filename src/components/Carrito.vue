@@ -34,6 +34,7 @@
         <p v-if="descuento > 0">Descuentos: $ {{ descuento.toFixed(0) }}</p>
         <p>Total: $ {{ total.toFixed(0) }}</p>
       </div>
+      <v-btn color="purple">Pagar</v-btn>
     </div>
 
     <div class="productos-container"></div>
@@ -83,7 +84,7 @@ export default {
   float: left;
   width: 30%;
   padding: 20px;
-  border: 1px solid #ccc;
+  border: 3px solid #3b0053;
 }
 
 .subtotal {
